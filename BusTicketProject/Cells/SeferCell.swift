@@ -7,19 +7,24 @@
 
 import UIKit
 
-class SeferCellCode: UITableViewCell{
+class SeferCell: UITableViewCell{
     
     
+ 
     @IBOutlet weak var companyImage: UIImageView!
     @IBOutlet weak var companyNameLabel: UILabel!
     @IBOutlet weak var deparatureLabel: UILabel!
     @IBOutlet weak var destinationLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
     }
+   
+    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -32,6 +37,7 @@ class SeferCellCode: UITableViewCell{
         self.destinationLabel.text = model.destinationPoint
         self.priceLabel.text = model.price
         self.timeLabel.text = model.time
+        
     }
     
 }
