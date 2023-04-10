@@ -9,6 +9,8 @@ import Foundation
 
 struct Ticket: Infoprotocol{
     
+    static var shared = Ticket()
+    
     var passenger: Passenger?
     var date: String?
     var time: String?
