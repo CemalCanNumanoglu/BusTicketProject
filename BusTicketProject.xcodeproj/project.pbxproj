@@ -10,6 +10,10 @@
 		D01BDD7429DAFF02005BC889 /* UView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BDD7329DAFF02005BC889 /* UView+Extension.swift */; };
 		D01BDD7729DAFFE7005BC889 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BDD7629DAFFE7005BC889 /* OnboardingSlide.swift */; };
 		D01BDD7A29DB0405005BC889 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BDD7929DB0405005BC889 /* OnboardingCollectionViewCell.swift */; };
+		D035D4A429E22FE20034B3B4 /* SeferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D035D4A329E22FE20034B3B4 /* SeferModel.swift */; };
+		D035D4A729E233910034B3B4 /* SeferCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D035D4A629E233910034B3B4 /* SeferCell.xib */; };
+		D035D4A929E233DC0034B3B4 /* SeferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D035D4A829E233DC0034B3B4 /* SeferCell.swift */; };
+		D035D4AC29E41ADF0034B3B4 /* SeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D035D4AB29E41ADF0034B3B4 /* SeatViewController.swift */; };
 		D03B35E729DAF961008D340D /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03B35E629DAF961008D340D /* Ticket.swift */; };
 		D03B35E929DAF98F008D340D /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03B35E829DAF98F008D340D /* Time.swift */; };
 		D03B35EB29DAF9AA008D340D /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03B35EA29DAF9AA008D340D /* Date.swift */; };
@@ -21,12 +25,18 @@
 		D0B9B1C929DAF8B300F5799D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B9B1C729DAF8B300F5799D /* Main.storyboard */; };
 		D0B9B1CB29DAF8B400F5799D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B9B1CA29DAF8B400F5799D /* Assets.xcassets */; };
 		D0B9B1CE29DAF8B400F5799D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B9B1CC29DAF8B400F5799D /* LaunchScreen.storyboard */; };
+		D0EA4B0229DCCBE3005739F5 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA4B0129DCCBE3005739F5 /* HomePageViewController.swift */; };
+		D0F90CB329E221A500B7F325 /* SeferlerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F90CB229E221A500B7F325 /* SeferlerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D01BDD7329DAFF02005BC889 /* UView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UView+Extension.swift"; sourceTree = "<group>"; };
 		D01BDD7629DAFFE7005BC889 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		D01BDD7929DB0405005BC889 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		D035D4A329E22FE20034B3B4 /* SeferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeferModel.swift; sourceTree = "<group>"; };
+		D035D4A629E233910034B3B4 /* SeferCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeferCell.xib; sourceTree = "<group>"; };
+		D035D4A829E233DC0034B3B4 /* SeferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeferCell.swift; sourceTree = "<group>"; };
+		D035D4AB29E41ADF0034B3B4 /* SeatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatViewController.swift; sourceTree = "<group>"; };
 		D03B35E629DAF961008D340D /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		D03B35E829DAF98F008D340D /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		D03B35EA29DAF9AA008D340D /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -40,6 +50,8 @@
 		D0B9B1CA29DAF8B400F5799D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0B9B1CD29DAF8B400F5799D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0B9B1CF29DAF8B400F5799D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0EA4B0129DCCBE3005739F5 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		D0F90CB229E221A500B7F325 /* SeferlerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeferlerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				D01BDD7629DAFFE7005BC889 /* OnboardingSlide.swift */,
+				D035D4A329E22FE20034B3B4 /* SeferModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -73,9 +86,26 @@
 			isa = PBXGroup;
 			children = (
 				D03B35F129DAFA21008D340D /* OnBoardingViewController.swift */,
-				D01BDD7929DB0405005BC889 /* OnboardingCollectionViewCell.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		D035D4A529E232BC0034B3B4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D01BDD7929DB0405005BC889 /* OnboardingCollectionViewCell.swift */,
+				D035D4A629E233910034B3B4 /* SeferCell.xib */,
+				D035D4A829E233DC0034B3B4 /* SeferCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D035D4AA29E41AC60034B3B4 /* SeatViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D035D4AB29E41ADF0034B3B4 /* SeatViewController.swift */,
+			);
+			path = SeatViewController;
 			sourceTree = "<group>";
 		};
 		D03B35E529DAF94D008D340D /* Structs */ = {
@@ -93,6 +123,9 @@
 		D03B35F029DAF9FC008D340D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D035D4AA29E41AC60034B3B4 /* SeatViewController */,
+				D0F90CB129E2215F00B7F325 /* SeferlerViewController */,
+				D0EA4B0029DCCBB8005739F5 /* Homepage */,
 				D01BDD7829DB03C3005BC889 /* Onboarding */,
 			);
 			path = Controllers;
@@ -117,6 +150,7 @@
 		D0B9B1C029DAF8B300F5799D /* BusTicketProject */ = {
 			isa = PBXGroup;
 			children = (
+				D035D4A529E232BC0034B3B4 /* Cells */,
 				D01BDD7529DAFFD2005BC889 /* Models */,
 				D01BDD7229DAFEDD005BC889 /* Extensions */,
 				D03B35F029DAF9FC008D340D /* Controllers */,
@@ -129,6 +163,22 @@
 				D0B9B1CF29DAF8B400F5799D /* Info.plist */,
 			);
 			path = BusTicketProject;
+			sourceTree = "<group>";
+		};
+		D0EA4B0029DCCBB8005739F5 /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+				D0EA4B0129DCCBE3005739F5 /* HomePageViewController.swift */,
+			);
+			path = Homepage;
+			sourceTree = "<group>";
+		};
+		D0F90CB129E2215F00B7F325 /* SeferlerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D0F90CB229E221A500B7F325 /* SeferlerViewController.swift */,
+			);
+			path = SeferlerViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +242,7 @@
 				D0B9B1CE29DAF8B400F5799D /* LaunchScreen.storyboard in Resources */,
 				D0B9B1CB29DAF8B400F5799D /* Assets.xcassets in Resources */,
 				D0B9B1C929DAF8B300F5799D /* Main.storyboard in Resources */,
+				D035D4A729E233910034B3B4 /* SeferCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,16 +254,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				D01BDD7729DAFFE7005BC889 /* OnboardingSlide.swift in Sources */,
+				D0F90CB329E221A500B7F325 /* SeferlerViewController.swift in Sources */,
 				D01BDD7429DAFF02005BC889 /* UView+Extension.swift in Sources */,
 				D03B35ED29DAF9C5008D340D /* InfoProtocol.swift in Sources */,
 				D03B35EF29DAF9E5008D340D /* Passenger.swift in Sources */,
 				D03B35EB29DAF9AA008D340D /* Date.swift in Sources */,
 				D0B9B1C229DAF8B300F5799D /* AppDelegate.swift in Sources */,
 				D03B35E929DAF98F008D340D /* Time.swift in Sources */,
+				D035D4A929E233DC0034B3B4 /* SeferCell.swift in Sources */,
 				D03B35F229DAFA21008D340D /* OnBoardingViewController.swift in Sources */,
+				D035D4A429E22FE20034B3B4 /* SeferModel.swift in Sources */,
+				D0EA4B0229DCCBE3005739F5 /* HomePageViewController.swift in Sources */,
 				D0B9B1C429DAF8B300F5799D /* SceneDelegate.swift in Sources */,
 				D03B35E729DAF961008D340D /* Ticket.swift in Sources */,
 				D01BDD7A29DB0405005BC889 /* OnboardingCollectionViewCell.swift in Sources */,
+				D035D4AC29E41ADF0034B3B4 /* SeatViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

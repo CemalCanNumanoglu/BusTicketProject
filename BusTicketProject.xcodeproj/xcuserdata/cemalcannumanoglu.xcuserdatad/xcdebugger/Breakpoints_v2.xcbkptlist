@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "DA767260-1182-4BE0-AE6B-B35890628D31"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0DE24754-63B4-4A1F-A3B5-557829BC5CD7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BusTicketProject/Controllers/Homepage/HomePageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "animate(toogle:tableView:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0DE24754-63B4-4A1F-A3B5-557829BC5CD7 - 9b5253daaffeec23"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in BusTicketProject.HomePageViewController.animate(toogle: Swift.Bool, tableView: __C.UITableView) -&gt; ()"
+                  moduleName = "BusTicketProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cemalcannumanoglu/Desktop/BusTicketProject/BusTicketProject/Controllers/Homepage/HomePageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "0DE24754-63B4-4A1F-A3B5-557829BC5CD7 - 56115f8195dfdaf7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 @Swift.MainActor () -&gt; () in BusTicketProject.HomePageViewController.animate(toogle: Swift.Bool, tableView: __C.UITableView) -&gt; ()"
+                  moduleName = "BusTicketProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cemalcannumanoglu/Desktop/BusTicketProject/BusTicketProject/Controllers/Homepage/HomePageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
