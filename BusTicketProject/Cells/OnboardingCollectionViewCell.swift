@@ -7,16 +7,16 @@
 
 import UIKit
 
-class OnboardingCollectionViewCell: UICollectionViewCell {
+final class OnboardingCollectionViewCell: UICollectionViewCell {
     
     static let identifier = String(describing: OnboardingCollectionViewCell.self)
     
-    
+    //MARK: - IBOUTLES
     @IBOutlet weak var slideImageView: UIImageView!
     @IBOutlet weak var slideTitleLabel: UILabel!
     @IBOutlet weak var slideDescriptionLabel: UILabel!
     
-    
+    //MARK: - F
     func setup(_ slide: OnboardingSlide) {
         
         slideImageView.image = slide.image
