@@ -10,7 +10,7 @@ import UIKit
 class SeferCell: UITableViewCell{
     
     
- 
+    //MARK: - IBOUTLETS
     @IBOutlet weak var companyImage: UIImageView!
     @IBOutlet weak var companyNameLabel: UILabel!
     @IBOutlet weak var deparatureLabel: UILabel!
@@ -25,7 +25,7 @@ class SeferCell: UITableViewCell{
     }
    
     
-    
+    //MARK: - FUNCS
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
