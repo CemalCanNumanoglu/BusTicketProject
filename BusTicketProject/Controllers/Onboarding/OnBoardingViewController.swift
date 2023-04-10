@@ -9,11 +9,12 @@ import UIKit
 
 class OnBoardingViewController: UIViewController {
 
-    
+    //MARK: - IBOUTLETS
     @IBOutlet weak var controlView: UICollectionView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    //MARK: - PROPERTIES
     var slides: [OnboardingSlide] = []
     
     var currentPage = 0 {
@@ -35,22 +36,25 @@ class OnBoardingViewController: UIViewController {
         
         
         slides = [
-            OnboardingSlide(title: "Ucuz Yolculuk Uygulamasına Hoş Geldin. :)", description: "Bu uygulama ile kolayca ucuza bilet bulup rahat ve kaliteli bir yolculuğun tadını çıkarabilirsin.", image: UIImage(named: "busicon")!),
+            OnboardingSlide(title: "Ucuz Yolcum Uygulamasına Hoş Geldin. :)", description: "Bu uygulama ile kolayca ucuza bilet bulup rahat ve kaliteli bir yolculuğun tadını çıkarabilirsin.", image: UIImage(named: "busicon")!),
             OnboardingSlide(title: "Biletini Al", description: "Hızlı ve ucuz bilet almak artık çok daha kolay.", image: UIImage(named: "busticket")!),
             OnboardingSlide(title: "3D Security ile Güvenli Ödemeni Yap", description: "Siber suçların fazla olduğu bu günlerde bu uygulamada içiniz rahar bir şekilde ödeme yapabilirsiniz.", image: UIImage(named: "security")!),
             OnboardingSlide(title: "Muhteşem Yolculuğun Tadını Çıkar", description: "Firmamızın yolcuk esnasında sağladığı imkanlar(yemek,içecek,internet vb.) ile harika bir yolculuk geçirmenizi dileriz... :)", image: UIImage(named: "wifibus")!)
         ]
+        
+        pageControl.numberOfPages = slides.count
 
         
     }
     
+    //MARK: - DELEGATE,DATA SOURCE FUNC
     private func viewcontroll() {
         controlView.delegate = self
         controlView.dataSource = self
     }
     
 
-   
+   //MARK: - BUTTON FUNC
     @IBAction func nextButtonClicked(_ sender: Any) {
         
         if currentPage == slides.count - 1 {
@@ -69,7 +73,7 @@ class OnBoardingViewController: UIViewController {
     
 }
 
-
+//MARK: - EXTENSION
 extension OnBoardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return slides.count
