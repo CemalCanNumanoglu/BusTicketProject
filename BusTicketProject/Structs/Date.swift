@@ -11,7 +11,7 @@ struct Date: Infoprotocol{
     
     var day: Int = 1
     var month: Int = 1
-    var year: Int = 2021
+    var year: Int = 2024
     
     func giveinfo() {
        print("Gün: \(day), Ay: \(month), Yıl: \(year)")
