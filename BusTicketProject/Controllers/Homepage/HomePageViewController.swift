@@ -9,7 +9,7 @@ import UIKit
 
 class HomePageViewController: UIViewController {
     
-    
+    //MARK: - IBOUTLES
     @IBOutlet weak var fromWhereButton: UIButton!
     @IBOutlet weak var fromWhereTableView: UITableView!
     @IBOutlet weak var toWhereButton: UIButton!
@@ -17,10 +17,9 @@ class HomePageViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var foundTicketButton: UIButton!
     
+    //MARK: - PROPERTIES
     var departurePoint: String?
     var destinationPoint: String?
-    
-    
     
     var citiesList = ["Adana","Adıyaman", "Afyon", "Ağrı", "Amasya", "Ankara", "Antalya", "Artvin",
                       "Aydın", "Balıkesir","Bilecik", "Bingöl", "Bitlis", "Bolu", "Burdur", "Bursa", "Çanakkale",
@@ -37,14 +36,16 @@ class HomePageViewController: UIViewController {
         super.viewDidLoad()
         
         title = "UCUZ YOLCUM"
-        TableViewCall()
+        tableViewCall()
         fromWhereTableView.isHidden = true
         toWhereTableView.isHidden = true
         
         
+        
+        
     }
     
-    
+    //MARK: - BUTTONS FUNCS
     @IBAction func fromWherBtnClicked(_ sender: Any) {
         
         if fromWhereTableView.isHidden {
@@ -66,30 +67,42 @@ class HomePageViewController: UIViewController {
         
     }
     
+    //MARK: - SEGUE FUNC
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toSeferlerVC" {
+            let seferlerViewController = segue.destination as! SeferlerViewController
+            seferlerViewController.deparature = fromWhereButton.currentTitle
+            seferlerViewController.destination = toWhereButton.currentTitle
+            
+        }
+    }
     
     @IBAction func foundTicketBtnClicked(_ sender: Any) {
     }
     
     
+    //MARK: - ANIMETE FUNC FOR BUTTONS
     func animate(toogle: Bool, tableView: UITableView) {
-
-              if toogle {
-                UIView.animate(withDuration: 0.5, delay: 0 ) {
-                    tableView.isHidden = false
-                }
-            } else {
-                UIView.animate(withDuration: 0.5, delay: 0) {
-                    tableView.isHidden = true
-              }
+        
+        if toogle {
+            UIView.animate(withDuration: 0.1, delay: 0 ) {
+                tableView.isHidden = false
+            }
+        } else {
+            UIView.animate(withDuration: 0.1, delay: 0) {
+                tableView.isHidden = true
+            }
+            
+            
             
         }
-            
+        
         
         
     }
     
-    
-    func TableViewCall() {
+    //MARK: - FUNC FOR DELEGATE,DATASORCE
+    func tableViewCall() {
         fromWhereTableView.delegate = self
         fromWhereTableView.dataSource = self
         
@@ -98,6 +111,7 @@ class HomePageViewController: UIViewController {
         
     }
     
+    //MARK: - FUNC FOR ALERT
     func makeAlert(titleInput: String, messageInput: String) {
         let alert = UIAlertController(title: titleInput, message: messageInput, preferredStyle: UIAlertController.Style.alert)
         
@@ -105,7 +119,7 @@ class HomePageViewController: UIViewController {
         alert.addAction(okButton)
         self.present(alert,animated: true)
     }
-    
+    //MARK: - FUNC FOR GET DATE
     func getDateAndTime () {
         
         let dateFormatter = DateFormatter()
@@ -130,7 +144,7 @@ class HomePageViewController: UIViewController {
 
 
 
-
+//MARK: - EXNTESION
 extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
     
     
@@ -139,7 +153,7 @@ extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-                
+        
         if tableView == fromWhereTableView {
             let cellFromWhere =  fromWhereTableView.dequeueReusableCell(withIdentifier: "fromWhereCell", for: indexPath)
             cellFromWhere.textLabel?.text = citiesList[indexPath.row]
@@ -151,29 +165,25 @@ extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
             cellToWhere.textLabel?.textColor = .white
             return cellToWhere
         }
-                
+        
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            
+        
         if tableView == fromWhereTableView {
             fromWhereButton.setTitle("\(citiesList[indexPath.row])", for: UIControl.State.normal)
             animate(toogle: false, tableView: fromWhereTableView)
         } else {
             toWhereButton.setTitle("\(citiesList[indexPath.row])", for: UIControl.State.normal)
             animate(toogle: false, tableView: toWhereTableView)
-            }
-            
+        }
+        
         if fromWhereButton.titleLabel?.text == toWhereButton.titleLabel?.text {
             makeAlert(titleInput: "Hata", messageInput: "Lütfen farklı şehirler giriniz.")
-            toWhereButton.setTitle("", for: UIControl.State.normal)
+            toWhereButton.setTitle("Hiçbiri", for: UIControl.State.normal)
         }
         
     }
-
-
-    
-    
     
 }
