@@ -78,6 +78,15 @@ class HomePageViewController: UIViewController {
     }
     
     @IBAction func foundTicketBtnClicked(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        
+        if fromWhereButton.titleLabel?.text == "Hiçbiri" || toWhereButton.titleLabel?.text == "Hiçbiri" {
+            makeAlert(titleInput: "Uyarı", messageInput: "Lütfen şehir seçiniz.")
+        }else {
+            defaults.set(fromWhereButton.titleLabel?.text, forKey: "fromWhere")
+            defaults.set(toWhereButton.titleLabel?.text, forKey: "toWhere")
+        }
+        
     }
     
     
@@ -111,14 +120,7 @@ class HomePageViewController: UIViewController {
         
     }
     
-    //MARK: - FUNC FOR ALERT
-    func makeAlert(titleInput: String, messageInput: String) {
-        let alert = UIAlertController(title: titleInput, message: messageInput, preferredStyle: UIAlertController.Style.alert)
-        
-        let okButton = UIAlertAction(title: "Tamam", style: UIAlertAction.Style.cancel)
-        alert.addAction(okButton)
-        self.present(alert,animated: true)
-    }
+   
     //MARK: - FUNC FOR GET DATE
     func getDateAndTime () {
         
@@ -187,3 +189,5 @@ extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
+
+
