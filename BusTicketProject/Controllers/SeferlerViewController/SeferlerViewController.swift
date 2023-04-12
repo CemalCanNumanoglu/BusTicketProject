@@ -17,8 +17,8 @@ class SeferlerViewController: UIViewController {
     var deparature: String?
     var destination: String?
     var seferler = [SeferModel]()
+    var price: Int?
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,19 +29,24 @@ class SeferlerViewController: UIViewController {
         
         tableView.frame = tableView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
         
-        seferler.append(SeferModel(companyName: "METRO TURİZM", companyImage: "metro", price: "300", deparaturePoint: deparature!, destinationPoint: destination!, time: "02:00"))
-        seferler.append(SeferModel(companyName: "ULUSOY", companyImage: "ulusoy", price: "320", deparaturePoint: deparature!, destinationPoint: destination!, time: "04:00"))
-        seferler.append(SeferModel(companyName: "KAMİL KOÇ", companyImage: "kamilkoc", price: "300", deparaturePoint: deparature!, destinationPoint: destination!, time: "08:00"))
-        seferler.append(SeferModel(companyName: "LÜKS ARTVİN", companyImage: "luksartvin", price: "310", deparaturePoint: deparature!, destinationPoint: destination!, time: "12:00"))
-        seferler.append(SeferModel(companyName: "CESUR BİNGÖL", companyImage: "cesurbingol", price: "290", deparaturePoint: deparature!, destinationPoint: destination!, time: "14:00"))
-        seferler.append(SeferModel(companyName: "VARAN TURİZM", companyImage: "varan", price: "290", deparaturePoint: deparature!, destinationPoint: destination!, time: "20:00"))
+        seferler.append(SeferModel(companyName: "METRO TURİZM", companyImage: "metro", price: 300, deparaturePoint: deparature!, destinationPoint: destination!, time: "02:00"))
+        seferler.append(SeferModel(companyName: "ULUSOY", companyImage: "ulusoy", price: 320, deparaturePoint: deparature!, destinationPoint: destination!, time: "04:00"))
+        seferler.append(SeferModel(companyName: "KAMİL KOÇ", companyImage: "kamilkoc", price: 300, deparaturePoint: deparature!, destinationPoint: destination!, time: "08:00"))
+        seferler.append(SeferModel(companyName: "LÜKS ARTVİN", companyImage: "luksartvin", price: 310, deparaturePoint: deparature!, destinationPoint: destination!, time: "12:00"))
+        seferler.append(SeferModel(companyName: "CESUR BİNGÖL", companyImage: "cesurbingol", price: 290, deparaturePoint: deparature!, destinationPoint: destination!, time: "14:00"))
+        seferler.append(SeferModel(companyName: "VARAN TURİZM", companyImage: "varan", price: 290, deparaturePoint: deparature!, destinationPoint: destination!, time: "20:00"))
 
        
         self.tableView.register(UINib(nibName: "SeferCell", bundle: nil), forCellReuseIdentifier: "seferCell")
     }
     
  
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toSeatVC" {
+            let destinationVC = segue.destination as? SeatViewController
+            destinationVC?.price = price
+        }
+    }
 
    
 }
@@ -80,6 +85,8 @@ extension SeferlerViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         performSegue(withIdentifier: "toSeatVC", sender: self)
+        price = seferler[indexPath.section].price
+        UserDefaults.standard.set(price, forKey: "price")
         
     }
     
