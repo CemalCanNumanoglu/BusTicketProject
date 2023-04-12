@@ -86,6 +86,7 @@ class HomePageViewController: UIViewController {
             defaults.set(fromWhereButton.titleLabel?.text, forKey: "fromWhere")
             defaults.set(toWhereButton.titleLabel?.text, forKey: "toWhere")
         }
+        getDateAndTime()
         
     }
     
@@ -129,9 +130,10 @@ class HomePageViewController: UIViewController {
         let date = dateFormatter.string(from: datePicker.date)
         
         let calendar = datePicker.calendar
-        let hour = String((calendar?.component(.hour, from: datePicker.date))!)
+        var hour = String((calendar?.component(.hour, from: datePicker.date))!)
         var minute = String((calendar?.component(.minute, from: datePicker.date))!)
         
+        if hour == "0" { hour += "0"}
         if minute == "0" { minute += "0"}
         let time = "\(hour):\(minute)"
         
