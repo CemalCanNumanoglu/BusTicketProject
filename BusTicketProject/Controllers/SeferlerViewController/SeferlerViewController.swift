@@ -29,7 +29,7 @@ class SeferlerViewController: UIViewController {
         
         tableView.frame = tableView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
         
-        seferler.append(SeferModel(companyName: "METRO TURİZM", companyImage: "metro", price: 300, deparaturePoint: deparature!, destinationPoint: destination!, time: "02:00"))
+        seferler.append(SeferModel(companyName: "METRO TURİZM", companyImage: "metro", price: 300, deparaturePoint: deparature!, destinationPoint: destination!, time: "02:30"))
         seferler.append(SeferModel(companyName: "ULUSOY", companyImage: "ulusoy", price: 320, deparaturePoint: deparature!, destinationPoint: destination!, time: "04:00"))
         seferler.append(SeferModel(companyName: "KAMİL KOÇ", companyImage: "kamilkoc", price: 300, deparaturePoint: deparature!, destinationPoint: destination!, time: "08:00"))
         seferler.append(SeferModel(companyName: "LÜKS ARTVİN", companyImage: "luksartvin", price: 310, deparaturePoint: deparature!, destinationPoint: destination!, time: "12:00"))
