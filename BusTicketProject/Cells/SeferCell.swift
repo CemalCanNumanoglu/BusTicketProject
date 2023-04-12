@@ -17,6 +17,7 @@ class SeferCell: UITableViewCell{
     @IBOutlet weak var destinationLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    var price: Int?
 
     
     override func awakeFromNib() {
@@ -35,9 +36,10 @@ class SeferCell: UITableViewCell{
         self.companyNameLabel.text = model.companyName
         self.deparatureLabel.text = model.deparaturePoint
         self.destinationLabel.text = model.destinationPoint
-        self.priceLabel.text = model.price
+        self.priceLabel.text = String(model.price)
         self.timeLabel.text = model.time
-        
+        price = model.price
     }
+    
     
 }
