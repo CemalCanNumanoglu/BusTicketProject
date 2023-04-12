@@ -21,7 +21,7 @@ class SeatViewController: UIViewController {
     var corridorNum = Int()
     var seatNum = Int()
     var seatDict = [Int : String]()
-    let bookedSeats = [1,5,14,21,36]
+    static var bookedSeats = [1,5,14,21,36]
     var price: Int?
     
     //MARK: -
@@ -53,6 +53,8 @@ class SeatViewController: UIViewController {
     @IBAction func buyTicketClicked(_ sender: Any) {
         if selectedSeats.isEmpty {
             makeAlert(titleInput: "Uyarı!", messageInput: "Lütfen en az 1 bilet seçiniz")
+        }else {
+            SeatViewController.bookedSeats.append(contentsOf: selectedSeats)
         }
     }
     
@@ -77,7 +79,7 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
             
             let numOfSeat = Int(seatDict[indexPath.row] ?? "0") ?? 0
             
-            if bookedSeats.contains(numOfSeat) {
+            if SeatViewController.bookedSeats.contains(numOfSeat) {
                 cell.seatImageView.image = UIImage(named: "sold")
                 cell.seatNumLabel.textColor = .white
             } else if isSelected(seatNum: numOfSeat) {
@@ -129,7 +131,7 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
                 selectedSeats.remove(at: index)
             }
             collectionView.reloadData()
-        }else if bookedSeats.contains(seat) {
+        }else if SeatViewController.bookedSeats.contains(seat) {
             makeAlert(titleInput: "Uyarı!", messageInput: "Bu koltuk daha önce satılmış. Lütfen başka koltuk seçiniz.")
         }else {
             if selectedSeats.count >= 5 {
@@ -139,10 +141,8 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
             selectedSeats.append(seat)
             collectionView.reloadData()
         }
-        
         UserDefaults.standard.set(selectedSeats, forKey: "selectedSeats")
         UserDefaults.standard.set(selectedSeats.count, forKey: "count")
     }
-    
     
 }
