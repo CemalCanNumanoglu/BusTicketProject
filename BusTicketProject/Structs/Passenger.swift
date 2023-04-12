@@ -8,10 +8,12 @@
 import Foundation
 
 struct Passenger: Infoprotocol {
-
-    var name: String = ""
-    var surname: String = ""
-    var id: Int = 0
+    
+    static var shared = Passenger()
+    
+    var name: String?
+    var surname: String?
+    var id: String?
 
     func giveinfo() {
         print("Yolcu adı: \(name), Yolcu")
