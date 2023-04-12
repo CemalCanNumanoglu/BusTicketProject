@@ -14,8 +14,8 @@
             filePath = "BusTicketProject/Controllers/Homepage/HomePageViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "animate(toogle:tableView:)"
             landmarkType = "7">
             <Locations>
