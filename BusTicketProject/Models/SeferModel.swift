@@ -10,7 +10,7 @@ import Foundation
 struct SeferModel {
     let companyName: String
     let companyImage: String
-    let price: String
+    let price: Int
     let deparaturePoint: String
     let destinationPoint: String
     let time: String
